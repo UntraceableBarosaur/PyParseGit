@@ -16,10 +16,10 @@ import sys
 
 # Insert the path to the CSV file here
 global csvPathVar
-csvPathVar = 'RomanTerms.csv'
+csvPathVar = 'Stored_Data.csv'
 
 #Git VARIABLES
-branch      =   "UntraceableBarosaur/PyParse.git"
+branch      =   "UntraceableBarosaur/PyParseGit.git"
 
 clone       =   "git clone https://github.com/"
 clonePath   =   "/Users/Owen/Desktop"
@@ -34,6 +34,9 @@ push        =   "git push --all https://github.com/"
 """~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"""
 #    GIT PULL FUNCTION:
 
+# Do a git pull on startup
+gitPull(branch,PyParsePath)
+
 def gitPull(branch,PyParsePath):
     os.chdir(PyParsePath) # Specifying the path where the cloned project has to be copied
     try:
@@ -41,13 +44,6 @@ def gitPull(branch,PyParsePath):
     except RuntimeError:
         print("Pulling Failed")
     print("Pulling Successful")
-
-# Git information
-pullPath =   "/Users/Owen/Desktop/PyParse"
-branch   =   "UntraceableBarosaur/PyParse.git"
-
-# Do a git pull on startup
-gitPull(branch,PyParsePath)
 
 def gitUpdate(*args):
     try:
