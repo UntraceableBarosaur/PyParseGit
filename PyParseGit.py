@@ -20,16 +20,8 @@ csvPathVar = 'Stored_Data.csv'
 
 #Git VARIABLES
 branch      =   "UntraceableBarosaur/PyParseGit.git"
-
-clone       =   "git clone https://github.com/"
-clonePath   =   "/Users/Owen/Desktop"
-
 PyParsePath  =  os.path.dirname(os.path.realpath("PyParseGit.py"))
-
 pull        =   "git pull https://github.com/"
-add         =   "git add ."
-commit      =   "git commit -am"
-push        =   "git push --all https://github.com/"
 
 """~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"""
 #    GIT PULL FUNCTION:
