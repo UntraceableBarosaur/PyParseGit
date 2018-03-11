@@ -26,9 +26,6 @@ pull        =   "git pull https://github.com/"
 """~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"""
 #    GIT PULL FUNCTION:
 
-# Do a git pull on startup
-gitPull(branch,PyParsePath)
-
 def gitPull(branch,PyParsePath):
     os.chdir(PyParsePath) # Specifying the path where the cloned project has to be copied
     try:
@@ -43,6 +40,9 @@ def gitUpdate(*args):
     except RuntimeError:
         returnTerm.set("An error occured during the git pull")
     returnTerm.set("The git pull has been successful")
+    
+# Do a git pull on startup
+gitPull(branch,PyParsePath)
 
 """~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"""
 #    CSV SEARCHING FUNCTION:
